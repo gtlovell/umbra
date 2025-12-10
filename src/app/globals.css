@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
+@theme {
+  --color-neonyellow-50: oklch(0.99 0.02 123.09);
+  --color-neonyellow-100: oklch(0.98 0.06 123.09);
+  --color-neonyellow-200: oklch(0.97 0.11 123.09);
+  --color-neonyellow-300: oklch(0.96 0.15 123.09);
+  --color-neonyellow-400: oklch(0.95 0.19 123.09);
+  --color-neonyellow-500: oklch(0.94 0.21 123.09);
+  --color-neonyellow-600: oklch(0.9307 0.228585 123.0902);
+  --color-neonyellow-700: oklch(0.78 0.19 123.09);
+  --color-neonyellow-800: oklch(0.62 0.15 123.09);
+  --color-neonyellow-900: oklch(0.45 0.1 123.09);
+  --color-neonyellow-950: oklch(0.25 0.06 123.09);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Default to Dark Mode Slate-950 */
+  --background: #020617;
+  --foreground: #f8fafc;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar for the Cyberpunk look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
